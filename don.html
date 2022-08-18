@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p1 {
+            height: 400px;
+            width: 400px;
+        background-color: aqua;
+        text-align: center;
+        display: none;
+        }
+        #d2 {
+            height: 300px;
+            width: 300px;
+            background-color: rgb(128, 71, 102);
+            display: none; 
+            text-align: center;
+            margin-left: 45px;
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#p1").hide(2000);
+                $("#d2").show(3000);
+            });
+            $("#p2").click(function(){
+            $("#p1").toggle(1000);
+            $("#d2").show(2000);
+            });
+        });
+    </script>
+</head>
+<body>
+   <div id="p1">
+        html
+        <div id="d2">CSS
+   </div>
+   </div>
+   <button>Hide</button> 
+   <input type="button" id="p2" value="Show">
+</body>
+</html>
