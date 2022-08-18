@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> 
+        <script type="text/javascript">
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#TxtTypeFocus").focus(function(){
+                    $(this).css("background-color", "rgb(235, 72, 72)");
+                })
+            });
+            $(document).ready(function(){
+                $("#TxtTypeBlur").blur(function(){
+                    $(this).css("background-color", "rgb(204, 137, 137)");
+                })
+            });
+            $(document).ready(function(){
+                $("#TxtTypeKeyPress").keypress(function(){
+                    $(this).css("background-color", "green");
+                })
+            });
+            $(document).ready(function(){
+                $("#TxtTypeKeyUp").keyup(function(){
+                    $(this).css("background-color", "purple");
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <input type="text" id="TxtTypeFocus" placeholder="Check the text is focus"><br><br><hr><br><br>
+        <input type="text" id="TxtTypeBlur" placeholder="Check the text is blur"><br><br><hr><br><br>
+        <input type="text" id="TxtTypeKeyPress" placeholder="Check the text is keypress"><br><br><hr><br><br>
+        <input type="text" id="TxtTypeKeyUp" placeholder="Check the text is keyup">
+    </body>
+</html>
